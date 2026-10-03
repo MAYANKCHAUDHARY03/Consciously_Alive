@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: center;
   font-family: var(--font-geist-sans);
-  background-color: var(--background);
+  background-color: var(--bg);
 }
 
 .main {
@@ -86,7 +86,7 @@
 
 a.primary {
   background: var(--text-primary);
-  color: var(--background);
+  color: var(--bg);
   gap: 8px;
 }
 

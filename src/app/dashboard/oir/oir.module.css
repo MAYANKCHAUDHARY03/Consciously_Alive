@@ -1,0 +1,209 @@
+/* ── OIR Analytics Page ─────────────────────────────────── */
+
+.page {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+}
+
+/* ── Header ───────────────────────────────────────────────── */
+
+.titleAccent {
+  color: var(--accent);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.backLink {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  transition: color 0.2s;
+}
+
+.backLink:hover {
+  color: var(--accent);
+}
+
+/* ── Range Selector ───────────────────────────────────────── */
+
+.rangeSelector {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--border);
+}
+
+.rangeBtn {
+  padding: 0.5rem 1rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: transparent;
+  border-right: 1px solid var(--border);
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.rangeBtn:last-child {
+  border-right: none;
+}
+
+.rangeBtn:hover {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-primary);
+}
+
+.rangeBtnActive {
+  background: var(--surface-elevated);
+  color: var(--accent);
+}
+
+/* ── Sections ─────────────────────────────────────────────── */
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section .technical-label {
+  margin-bottom: 1rem;
+}
+
+/* ── Panel ────────────────────────────────────────────────── */
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+}
+
+.panel .technical-label {
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── Analytics Grid ───────────────────────────────────────── */
+
+.analyticsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* ── Loading ──────────────────────────────────────────────── */
+
+.loadingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  gap: 1rem;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Error ────────────────────────────────────────────────── */
+
+.errorState {
+  padding: 3rem;
+  background: rgba(255, 0, 0, 0.05);
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.errorMsg {
+  color: var(--text-secondary);
+  margin: 1rem 0 2rem;
+  font-size: 0.85rem;
+}
+
+.retryBtn {
+  display: inline-block;
+  background: rgba(197, 168, 92, 0.1);
+  color: var(--accent);
+  border: 1px solid rgba(197, 168, 92, 0.3);
+  padding: 0.5rem 1.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  transition: all 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.retryBtn:hover {
+  background: rgba(197, 168, 92, 0.2);
+}
+
+/* ── Empty ────────────────────────────────────────────────── */
+
+.emptyPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  text-align: center;
+  gap: 0.75rem;
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .analyticsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .rangeSelector {
+    flex-wrap: wrap;
+  }
+
+  .rangeBtn {
+    flex: 1;
+    min-width: 60px;
+    text-align: center;
+    padding: 0.5rem 0.5rem;
+  }
+}

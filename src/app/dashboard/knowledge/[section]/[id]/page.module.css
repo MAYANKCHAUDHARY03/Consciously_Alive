@@ -1,0 +1,139 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--bg-primary);
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-family: monospace;
+  font-size: 0.875rem;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.backBtn:hover {
+  color: var(--accent);
+}
+
+.title {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.metaRow {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.editBtn {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.4rem 1rem;
+  font-family: monospace;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.editBtn:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.contentBody {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  white-space: pre-wrap;
+  margin-bottom: 3rem;
+}
+
+.metaSection {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin-top: 3rem;
+}
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.metaLabel {
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metaValue {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.loadingState, .errorState {
+  padding: 3rem;
+  text-align: center;
+  font-family: monospace;
+  color: var(--text-secondary);
+}
+
+.errorState {
+  color: #e06c75;
+}
+
+.tag {
+  display: inline-block;
+  font-family: monospace;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}

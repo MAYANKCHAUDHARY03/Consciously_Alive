@@ -1,0 +1,376 @@
+/* ── Analytics Module CSS ─────────────────────────────────── */
+
+/* ── Chart Container ──────────────────────────────────────── */
+
+.chartContainer {
+  width: 100%;
+  min-height: 300px;
+}
+
+/* ── Summary Cards ────────────────────────────────────────── */
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+.summaryCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: var(--space-6) var(--space-4);
+  text-align: center;
+  position: relative;
+}
+
+.summaryValue {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: var(--space-2);
+  font-family: var(--font-mono);
+}
+
+.summaryValueMuted {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  line-height: 1;
+  margin-bottom: var(--space-2);
+  font-family: var(--font-mono);
+}
+
+.summaryLabel {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+}
+
+.summaryDetail {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+  opacity: 0.8;
+}
+
+/* ── Empty / Unavailable States ───────────────────────────── */
+
+.emptyChart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.emptyIcon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.emptyTitle {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.emptyText {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  opacity: 0.8;
+  max-width: 320px;
+  line-height: 1.5;
+}
+
+.unavailableState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: 2rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px dashed var(--border);
+}
+
+.unavailableIcon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  opacity: 0.4;
+}
+
+.unavailableTitle {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.unavailableText {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  opacity: 0.7;
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+/* ── Topic Section ────────────────────────────────────────── */
+
+.topicSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.topicList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.topicRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: 0.85rem;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.topicRank {
+  width: 24px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.topicName {
+  width: 120px;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lowSample {
+  font-size: 0.6rem;
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+.topicBarContainer {
+  flex: 1;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.topicBar {
+  height: 100%;
+  background: var(--success);
+  transition: width 0.3s ease;
+}
+
+.topicAccuracy {
+  width: 50px;
+  text-align: right;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.topicCount {
+  width: 40px;
+  text-align: right;
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+}
+
+/* ── Recent Practice Table ────────────────────────────────── */
+
+.practiceTable {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.practiceHeader {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+  border-bottom: 2px solid var(--border);
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.practiceRow {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  align-items: center;
+}
+
+.colDate {
+  width: 60px;
+  flex-shrink: 0;
+}
+
+.colTopic {
+  width: 100px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.colQuestions {
+  width: 30px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.colCorrect {
+  width: 55px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.colAccuracy {
+  width: 50px;
+  text-align: right;
+  flex-shrink: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.colSpeed {
+  width: 60px;
+  text-align: center;
+  flex-shrink: 0;
+  color: var(--text-secondary);
+}
+
+.colBadge {
+  width: 55px;
+  text-align: center;
+  flex-shrink: 0;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 2px 4px;
+}
+
+.badgeHigh {
+  color: var(--success);
+}
+
+.badgeMedium {
+  color: var(--accent);
+}
+
+.badgeLow {
+  color: var(--danger);
+}
+
+.thresholdNote {
+  font-size: 0.6rem;
+  color: var(--text-secondary);
+  opacity: 0.6;
+  margin-top: 0.75rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+/* ── Insights ─────────────────────────────────────────────── */
+
+.insightsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.insightItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: rgba(0, 0, 0, 0.15);
+  border-left: 3px solid var(--border);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.insightItem[data-type="improvement"] {
+  border-left-color: var(--success);
+}
+
+.insightItem[data-type="regression"] {
+  border-left-color: var(--danger);
+}
+
+.insightItem[data-type="best_week"] {
+  border-left-color: var(--accent);
+}
+
+.insightItem[data-type="strongest_topic"] {
+  border-left-color: var(--success);
+}
+
+.insightItem[data-type="weakest_topic"] {
+  border-left-color: var(--warning);
+}
+
+.insightIcon {
+  flex-shrink: 0;
+  font-size: 0.9rem;
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .summaryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .summaryGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .summaryValue,
+  .summaryValueMuted {
+    font-size: 1.5rem;
+  }
+
+  .topicName {
+    width: 80px;
+  }
+
+  .practiceHeader,
+  .practiceRow {
+    font-size: 0.7rem;
+  }
+
+  .colTopic {
+    width: 70px;
+  }
+
+  .colSpeed {
+    display: none;
+  }
+}
